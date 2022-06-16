@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name = "viewport" content = "width=device-width">
+  <title>Face orientation Detection</title>
+  <meta charset="utf-8">
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js" crossorigin="anonymous"></script>
+  <script src="https://threejs.org/build/three.js" crossorigin="anonymous"></script>
+  <script src="index.js" defer ></script>
+  <style>
+
+    * { box-sizing:border-box; margin:0; padding:0; }
+
+    html { height:100%; width:100%; }
+
+    body {
+
+      align-content:space-around;
+      background-color:#202830;
+      color:#ffffff;
+      display:grid;
+      justify-content:center;
+      font-size:1.25em;
+      min-height:100%;
+      width:100%;
+
+    }
+
+    p { text-align:left; }
+
+  </style>
+</head>
+
+<body>
+ 
+    <video class="input_video" style="display:none;"></video>
+    <canvas class="output_canvas" ></canvas>
+    <button onclick="startCam()">Start</button>
+    <button onclick="stopCam()">Stop</button>
+
+Forward: <p id="forward"></p> 
+Right: <p id="right"></p> 
+Left: <p id="left"></p> 
+Up: <p id="up"></p>
+Down: <p id="down"></p>
+
+  
+  
+</body>
+</html>
+
